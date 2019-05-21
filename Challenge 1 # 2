@@ -1,0 +1,36 @@
+class Main {
+  public static void main(String[] args) {
+    //System.out.println("racecar is " + isPalindrome("racecar"));
+    //System.out.println("jis is " + isPalindrome("jis") );
+    System.out.println("haiiniah is " + isPalindrome("haiiniah") );
+  }
+
+
+static boolean isPalindrome(String testString) {
+  int numberOfTimes;
+  if (testString.length()%2 == 0){
+    numberOfTimes = testString.length() / 2;
+   System.out.println("numberOfTimes:" + numberOfTimes);    
+  }
+  else {
+    numberOfTimes = (testString.length() / 2);
+    System.out.println("numberOfTimes:" +numberOfTimes);
+  }
+  for(int i=0; i < numberOfTimes; i++){
+   // System.out.println("i=" +i);
+    //System.out.println("testString at i: " +testString.charAt(i));
+    //System.out.println(testString.length());
+    if (testString.charAt(i) == testString.charAt(testString.length()- i - 1))  {
+      System.out.println(testString.charAt(i));
+      return true;
+      }
+    else {
+      return false;
+    }
+  }
+  
+return false;
+}
+}
+
+
